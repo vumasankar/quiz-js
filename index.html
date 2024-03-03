@@ -1,91 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>quizt</title>
-</head>
-<body>
-    <div id="container" style="width: 550px; height: 350px; margin:auto; border: solid gray 5px; text-align: center; box-shadow: wheat 10px;">
-       <h1 >Interactive Quiz</h1>
-         <div id="one">
-              <p>1. What is the capital of France?</p> 
-              <input type="radio" name="capital" value="paris" id="Paris" >Paris
-               <input type="radio" name="capital" value="London" id="london" >London
-             <input type="radio" name="capital" value="berlin" id="berlin" > berlin
-             <br>
-            </div>
-             
-              <div id="two">
-                <p>2.Which planet is known as the red planet ?</p>
-                <input type="radio" name="planet" value="mars" id="mars" >Mars
-                 <input type="radio" name="planet" value="venus" id="venus" >Venus
-               <input type="radio" name="planet" value="jupiter" id="jupiter" > Jupiter
-                <br>
-            </div>
-            <div id ="three">
-                <p>3.Which is the largest mammal on earth? ?</p>
-                <input type="radio" name="earth" value="elephant" id="elephant" >Elephant
-                 <input type="radio" name="earth" value="blue " id="blue" >Blue whale
-               <input type="radio" name="earth" value="giraffe" id="giraffe" > Giraffe
-                <br>
-            </div>
-              <br>
-              <button id="submit" style="background-color: green; color: white; padding: 5px; border: none; width: 60px ;" >Submit </button>
 
-        
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>quizt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="container">
+    <h1>Interactive Quiz</h1>
+    <div id="one">
+      <p>1. What is the capital of France?</p>
+      <input type="radio" name="capital" value="paris" id="Paris">Paris
+      <input type="radio" name="capital" value="London" id="london">London
+      <input type="radio" name="capital" value="berlin" id="berlin"> berlin
+      <br>
     </div>
-    </body>
-   
-    <div id="result"  style="width: 550px; height: 300px; border: solid black 1px; margin: auto; text-align: center; display: none;">
-   
-     <h1>Interactive quiz</h1>
-     <h2>Your Quiz result</h2>
-     <p id="score">Score:</p>
+
+    <div id="two">
+      <p>2.Which planet is known as the red planet ?</p>
+      <input type="radio" name="planet" value="mars" id="mars">Mars
+      <input type="radio" name="planet" value="venus" id="venus">Venus
+      <input type="radio" name="planet" value="jupiter" id="jupiter"> Jupiter
+      <br>
     </div>
+    <div id="three">
+      <p>3.Which is the largest mammal on earth? ?</p>
+      <input type="radio" name="earth" value="elephant" id="elephant">Elephant
+      <input type="radio" name="earth" value="blue " id="blue">Blue whale
+      <input type="radio" name="earth" value="giraffe" id="giraffe"> Giraffe
+      <br>
+    </div>
+    <br>
+    <button id="submit">Submit </button>
+
+
+  </div>
+</body>
+
+<div id="result">
+
+  <h1>Interactive quiz</h1>
+  <h2>Your Quiz result</h2>
+  <p id="score">Score:</p>
+</div>
 </div>
 
- 
-  </body>
-    <script>
-        var container = document.getElementById("container")
-        var one = document.getElementById("one")
-        var x = 1;
-        var submit= document.getElementById("submit")
-       
-        var score = document.getElementById("score")
-        var result = document.getElementById("result")
-        
-        function togetuserone(){
-            const Paris = document.getElementById("Paris").checked
-            const London = document.getElementById("london").checked
-            const Berlin= document.getElementById("berlin").checked
-            marks = Paris ? x++ : London ? '0' : Berlin ? '0' : 'Please select any option'
 
-            const mars = document.getElementById("mars").checked
-            const venus = document.getElementById("venus").checked
-            const jupiter = document.getElementById("jupiter").checked
-            marks = mars ? x++ : venus ? '0' : jupiter ? '0' : ''
-
-            const elephant = document.getElementById("elephant").checked
-            const blue = document.getElementById("blue").checked
-            const giraffe = document.getElementById("giraffe").checked
-            marks = blue ? x++ : elephant ? '0' : giraffe ? '0' : ''
-
-            return marks
-            }
-
-            submit.addEventListener("click",function(){
-                var marks = togetuserone()
-                
-                 container.style.display ="none"
-                 result.style.display = "block"
-                 score.textContent = "Score:" + marks
-                 
-
-            })
-            
-           
-    </script>
 </body>
+<script src="index.js">
+
+</script>
+</body>
+
 </html>

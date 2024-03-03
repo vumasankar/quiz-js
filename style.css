@@ -1,0 +1,23 @@
+#container{
+    width: 550px; 
+    height: 350px; 
+    margin:auto; 
+    border: solid gray 5px; 
+    text-align: center; 
+    box-shadow: wheat 10px;
+}
+#submit{
+    background-color: green; 
+    color: white; 
+    padding: 5px; 
+    border: none; 
+    width: 60px ;
+}
+#result{
+    width: 550px; 
+    height: 300px; 
+    border: solid black 1px; 
+    margin: auto; 
+    text-align: center; 
+    display: none; 
+}
